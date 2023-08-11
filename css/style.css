@@ -517,7 +517,9 @@ div.kontak {
 /* FOOTER */
 
 footer {
-   background-color: #198754;
+   /* background-color: #198754; */
+   background: linear-gradient(to left, red, rgb(104, 104, 167));
+
    padding-top: 15px;
    padding-bottom: 15px;
    color: #fff;
