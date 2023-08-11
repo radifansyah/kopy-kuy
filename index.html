@@ -8,6 +8,36 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Website Kopi Kuy</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* scroll */
+        .scrollTop {
+            position: fixed;
+            bottom: 800px;
+            right: 5px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-size: 40px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(images/scroll.jpg);
+            cursor: pointer;
+            z-index: 2;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .scrollTop.active {
+            bottom: 30px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* scroll */
+    </style>
+
+
 </head>
 
 <body>
@@ -24,7 +54,7 @@
     </nav>
 
     <!-- Tulis Kode HTML / <header> Setelah baris di bawah ini (baris 28) -->
-
+    <div class="scrollTop" onclick="scrollToTop()"></div>
     <header>
         <div class="kiri">
             <h1>Kopi Kuy <img src="images/icon/icon_kopi.svg"></h1>
@@ -203,6 +233,20 @@
         dan setiap section harus setelah kode </section>
         jangan menulis <section> di dalam <section>
     -->
+    <script>
+        window.addEventListener('scroll', function () {
+            var scroll = document.querySelector(".scrollTop");
+            scroll.classList.toggle("active", window.scrollY > 200)
+        })
+
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+    </script>
 </body>
 
 </html>
