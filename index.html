@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Website Kopi Kuy</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Animation -->
     <style>
         /* scroll */
         .scrollTop {
@@ -20,12 +23,12 @@
             background-size: 40px;
             background-position: center;
             background-repeat: no-repeat;
-            background-image: url(images/scroll.jpg);
+            background-image: url(images/scroll.png);
             cursor: pointer;
             z-index: 2;
             visibility: hidden;
             opacity: 0;
-            transition: 0.5s;
+            transition: all ease-in-out 2s;
         }
 
         .scrollTop.active {
@@ -35,6 +38,43 @@
         }
 
         /* scroll */
+
+        /* popup */
+
+        .container-popup {
+            top: 200px;
+            left: 10%;
+            right: 10%;
+            width: 50%;
+            position: fixed;
+            display: flex;
+            z-index: 1;
+            justify-content: center;
+        }
+
+        .container-popup img {
+
+            width: 100%;
+            background-color: black;
+        }
+
+        .container-popup button {
+            position: absolute;
+            top: -21px;
+            background-color: black;
+            color: white;
+            right: 0;
+        }
+
+        @media (max-width:578px) {
+            .container-popup {
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+        }
+
+        /* popup */
     </style>
 
 
@@ -55,6 +95,11 @@
 
     <!-- Tulis Kode HTML / <header> Setelah baris di bawah ini (baris 28) -->
     <div class="scrollTop" onclick="scrollToTop()"></div>
+    <div class="container-popup" id="popup" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+        <img src="./images/logo/logo_kuy.png" alt="">
+        <button onclick="tutupPopup()" style="font-weight: bold; ">Close X</button>
+    </div>
     <header>
         <div class="kiri">
             <h1>Kopi Kuy <img src="images/icon/icon_kopi.svg"></h1>
@@ -77,8 +122,8 @@
     </header>
 
     <section class="best-seller" id="best-seller">
-        <h2>Menu Andalan Kami</h2>
-        <p>
+        <h2 data-aos="zoom-in" data-aos-duration="2000">Menu Andalan Kami</h2>
+        <p data-aos="fade-up" data-aos-duration="3000">
             Nikmati menu andalan yang menjadi favorit customer Kami </p>
         <div class="produk">
             <img src="images/produk/product_capuchino.jpg" alt="">
@@ -99,16 +144,16 @@
     </section>
 
     <section id="about-us" class="about-us">
-        <h2>Gak Ngopi Gak Kuy!</h2>
-        <p>
+        <h2 data-aos="fade-up" data-aos-duration="3000">Gak Ngopi Gak Kuy!</h2>
+        <p data-aos="fade-up" data-aos-duration="2000">
             Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan kopi
             dengan kualitas tinggi
             untuk para pelanggannya. Nama Kuy yang diambil dari "yuk" yang merupakan harapan kami untuk
             mengajak semua yang terlibat dalam bisnis kami untuk bersama-sama menikmati sajian kopi yang
             berkualitas.
         </p>
-        <img src="images/about-us/aset_kopi_jumbo.png">
-        <p>
+        <img src="images/about-us/aset_kopi_jumbo.png" data-aos="fade-up" data-aos-duration="2000">
+        <p data-aos="fade-up" data-aos-duration="1000">
             Kopi dari petani terpilih, dan berkualitas tinggi diproses secara sempurna dan diteruskan
             oleh para barista handal,
             yang penuh semangat dalam menyiapkan segelas kebahagiaan spesial untukmu
@@ -233,10 +278,24 @@
         dan setiap section harus setelah kode </section>
         jangan menulis <section> di dalam <section>
     -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Script Tutup Popup -->
+    <script>
+        function tutupPopup() {
+            document.getElementById('popup').style.display = 'none ';
+        }
+    </script>
+    <!-- akhir Script Tutup Popup -->
+    <!-- Script scrollTop -->
     <script>
         window.addEventListener('scroll', function () {
             var scroll = document.querySelector(".scrollTop");
-            scroll.classList.toggle("active", window.scrollY > 200)
+            scroll.classList.toggle("active", window.scrollY > 700)
         })
 
 
@@ -247,6 +306,7 @@
             })
         }
     </script>
+    <!-- akhir Script scrollTop -->
 </body>
 
 </html>
