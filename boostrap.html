@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostrap v5</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- bisa ganti tema -->
+    <!-- <link rel="stylesheet" href="vendor/bootstrap/sketchy.css"> -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <style>
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat {
+            width: 70px;
+        }
+
+        .gambar {
+            border-radius: 25px;
+            box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.37);
+            transition: all ease-in-out .3s;
+        }
+
+        .gambar:hover {
+            transform: scale(.9);
+            border-radius: 50%;
+            transition: all ease-in-out .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg text-light  bisadicopy" style="background-color: green;" !important>
+        <div class="container-fluid mx-3">
+            <a class="navbar-brand" href="https://www.rikikurnia.com">
+                <img src="./images/logo/logo_kuy.png" height="40" alt="image">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav3"
+                aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav3">
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://www.rikikurnia.com">Best Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.rikikurnia.com">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.rikikurnia.com">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.rikikurnia.com">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.rikikurnia.com">Shop</a>
+                    </li>
+                </ul>
+                <a class="btn chat btn-outline-success ms-md-5 " href="https://www.rikikurnia.com"
+                    style="background-color: rgb(8, 69, 8);color: white;">Chat</a>
+            </div>
+        </div>
+    </nav>
+    <!-- akhirNavBar -->
+
+    <header>
+        <div class="container-fluid ">
+            <div class="row  mx-5 border-bottom align-items-center justify-content-between" style="height: 100vh;">
+                <div class="col-5">
+                    <h1>Kopi Kuy <img src="bahanku/icon_kopi.svg" alt=""></h1>
+                    <p style="font-size: 18px;">Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan high
+                        quality Coffee untuk
+                        para pelanggannya.</p>
+                    <p>Dapat dibeli melalui</p>
+                    <div class="media">
+                        <img src="bahanku/logo_bukalapak.png" class="me-3" width="37px" alt="">
+                        <img src="bahanku/logo_tokopedia.png" class="me-3" width="37px" alt="">
+                        <img src="bahanku/logo_shopee.png" class="me-3" width="37px" alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="bahanku/header1.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row border-bottom mt-5 text-center">
+            <div class="col-12  ">
+                <h2>Menu Andalan Kami</h2>
+                <p class="mt-4 mb-5 fw-bold">Nikmati menu andalan yang menjadi favorit customer Kami</p>
+            </div>
+            <div class="col-3">
+                <img src="bahanku/produk/product_capuchino.jpg" class="img-fluid gambar" alt="">
+                <p class="mb-5 mt-3 fw-bold">Cappuchino</p>
+            </div>
+            <div class="col-3">
+                <img src="bahanku/produk/product_capuchino.jpg" class="img-fluid gambar" alt="">
+                <p class="mb-5 mt-3 fw-bold">Cappuchino</p>
+            </div>
+            <div class="col-3">
+                <img src="bahanku/produk/product_capuchino.jpg" class="img-fluid gambar" alt="">
+                <p class="mb-5 mt-3 fw-bold">Cappuchino</p>
+
+            </div>
+            <div class="col-3">
+                <img src="bahanku/produk/product_capuchino.jpg" class="img-fluid gambar" alt="">
+                <p class="mb-5 mt-3 fw-bold">Cappuchino</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid  mt-5">
+        <div class="row mx-auto text-center justify-content-center">
+            <div class="col-9 mt-5">
+                <h2>Gak Ngopi Gak Kuy!</h2>
+                <p class="my-4">Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan
+                    kopi dengan
+                    kualitas tinggi untuk para pelanggannya. Nama Kuy yang diambil dari "yuk" yang merupakan harapan
+                    kami untuk mengajak semua yang terlibat dalam bisnis kami untuk bersama-sama menikmati sajian kopi
+                    yang berkualitas.</p>
+                <img src="bahanku/aset_kopi_jumbo.png" class="img-fluid" width="80%" alt="">
+                <p class="mt-4">Kopi dari petani terpilih, dan berkualitas tinggi diproses secara sempurna dan
+                    diteruskan oleh para
+                    barista handal, yang penuh semangat dalam menyiapkan segelas kebahagiaan spesial untukmu</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
