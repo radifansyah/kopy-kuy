@@ -278,11 +278,20 @@
         dan setiap section harus setelah kode </section>
         jangan menulis <section> di dalam <section>
     -->
+    <!-- animasi gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // gsap.from('.gmb', {duration:1,y:-100, opacity:0});
+        gsap.from('nav', { duration: 3.5, ease: "bounce.out", x: -500 });
+    </script>
+    <!-- animasi gsap -->
 
+    <!-- Animasi Aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <!-- Animasi Aos -->
 
     <!-- Script Tutup Popup -->
     <script>
